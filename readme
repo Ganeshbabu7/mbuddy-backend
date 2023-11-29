@@ -1,0 +1,411 @@
+16-10-2023
+1. Blocker - Discover -> Events -> Location Issue resolved
+2. Save Buds - Skip and limit added in API
+3. General Settings - Manage session created date added in API
+4. Login - Weather Admin condition added in Login Router.
+5. Privacy Settings 
+      1. Created common function for create and read buddy list for 
+      Block Commenters, Hide Stories, Show Stories, Mute Stories and Block accounts.
+6. General Search - Blocked buddy removed in buddys search
+
+13-10-2023
+1. Admin - Schema for Settings.
+
+12-10-2023
+1. Login - In Login API added role for admin
+2. Admin - AdminTokenValidation added in all routers.
+
+05-10-2023
+1. Manage Session - Issue resolved.
+2. Buddy Request - Privacy setting public directly follow the buddy.
+3. Save Buds - Save buds readMineGrid action added API updated.
+4. Change Password - OTP Send commented.
+5. Cron Function - Cron Function added in app.js file - Client Issue.
+6. Admin - Manage Community -> Add Category API changed to formdata and added subCategory
+
+29-09-2023
+1. Settings - Block Comments, Hide Stories & Share Stories Correction.
+2. General Search - Params Wrongly passed in buddy search.
+3. Comments - isComment key added
+4. General Settings - Manage session api issue resolved.
+
+26-09-2023
+1. Admin - ManageBuddys, ManageBuds, ManageCommuntiy, ManageEvents 
+           (Pagination Integrated in API)
+
+25-09-2023
+1. Chat Schema - Location updated from string to object (lat, long, address).
+2. Buds - Api Created for Audio uploading.
+3. Admin - Manage Report (Buddys, Buds, Comments, Stories, Chat, Community & Events)
+4. Admin - Category CRUD for Community & Events
+5. Admin - Verified Buddys (All Buddys & Only Approved Verified Buddys)
+
+22-09-2023
+1. Notification - bud comment reply (budID Key added)
+2. Notification - Bud type key word added
+3. Notification - New API Created fot NTF & Community NTF
+4. Notification - Board readList API created.
+
+21-09-2023
+1. Chat - oneToOne Chat, Group Chat Socket Io chat sending and receiving.
+2. Search - Community isJoined key word added for search result.
+
+20-09-2023
+1. Chat - Socket io connection, disconnection, sendMessage functions added.
+
+19-09-2023
+1. Report - Routers created for buds and comments
+2. Report - Report Function added for create and update
+3. Chat - chatRouters While creating weather already created condition added.
+        - except location schema changed to array for chat.
+
+15-09-2023
+1. Report - Schema created created for all reports 
+            (buddys, buds, comments, stories, communities, events)
+
+14-09-2023
+1. Admin Panel - Manage Buds (Total Buds, Active Buds, Hide Buds, Suspended Buds)
+2. Admin Panel - Manage Community (Total Community, Request Communit, Suspended Community)
+3. Admin Panel - Manage Buds (Total Events, Upcoming Events, Past Events)
+
+13-09-2023
+1. Suggestion - Notification action added and API Updated.
+2. Suggestion - Function created for centeralisation.
+3. Event - Ticket Generated while event registeration.
+4. Event - Transaction Read API Created.
+5. Event - API added for updateStatus and updateFavourite
+6. Event - In all types of list isFavourite key added.
+
+08-09-2023
+1. General Router - Company Details Info API Created.
+2. Events - eventStatus key removed in schema and added on corresponding api
+          - Read event
+          - Read All
+          - Read Intrested
+          - Read My Events
+          - Read Favourite
+          - Read Past
+3. Bud - Read community, teams, subTeams bud condition revised
+4. Community - Add Admin array condition changed.
+
+07-09-2023
+1. Discover - community buddyDetails-> null issue
+2. Notification - Notification List -> Buds Details
+3. Notification - Total Count List - missing 
+4. Suggestion - community list -> waiting approval issue
+5. Community - join community list nested array issue
+6. Add event status key in events details and list api
+7. eventTermsAndCondition key string format
+8. Add community cat in create events page(add key) and add front end
+9. Past event(register, interested, my events)
+10. create subteam success message need change
+11. addAdmin, removeAdmins API added for communtiy and userId has changed to array.
+
+06-09-2023
+1. Community - Board API correction for teams and subTeams
+2. Admin - Manage Buds - Total Buds List
+
+05-09-2023
+1. Sprint 1 Admin - Manage Budds API Creation 
+   (totalBuddys, totalBuddysPosts, blockedBuddys)
+
+04-09-2023
+1. Notification - body keyword->buddyname not shown its undefined
+2. Notification - notificationlist -> latest message show last
+3. Notification - After read notification -> "isRead" status is not changing 
+4. Notification - Add keyword in Notification List, Activities or Board
+5. Login - Edit Email or Mob no duplication issue resolved.
+
+01-09-2023
+1. Community - API Correction.
+1. Events - API Correction.
+
+30-08-2023
+1. Community - Message option create, remove.
+2. Community - Category with subcategory Dropdown
+3. Chat - Real time.
+
+29-08-2023
+1. Community - Teams List, Sub Teams List issue resolved
+2. Community - isAdmin, isOwner, isRequested key added.
+3. Discover - Added follow Status key.
+4. Suggestion - Community suggestion added follow status key.
+5. Buds - Community Buds list issue resolved.
+6. Login - editEmailMobNo API removed userId and added oldEmailMobNo key
+
+28-08-2023
+1. Community - Request flow issue resolved
+2. Community - BuddyList followstatus added in discover
+3. Community - Read api isOwner, isAdmin key added.
+4. Discover - Events Filter changed based on community & location.
+
+25-08-2023
+1. Team -->  isAdmin and isOwner key
+2. Team - communityCount API -> Teams & sub team Id
+3. Team --> Search
+4. Team --> Leave API 
+5. Team --> Community Details
+
+24-08-2023
+Discover Module :
+1. Category Filter :
+   --> My communities & Joined Communities should not show.
+   --> (isRequested - "Request Sent", "Approved")
+2. Verified Profile :
+   --> Should not show current user.
+   --> followStatus key need to add-24-08-2023
+   --> Verified Profile - Search Buddys-24-08-2023
+3. Global Communities :
+   --> My communities & Joined Communities should not show.
+   Community Module :
+4. Search for My communities & Joined Communities-24-08-2023
+5. Suggested Buddys
+   --> Search Buddys - current user & already follow (remove) - 24-08-2023
+   --> Current User need to remove
+6. My Communities --> isAdmin and isOwner key-24-08-2023
+7. Joined Communities --> isAdmin and isOwner key-24-08-2023
+8. Move to board --> 2nd time should not add-24-08-2023
+9. Community --> Block - (Not Required)
+10. Community --> Buddys -> Search -> except mine, following status.
+
+23-08-2023
+
+1. Push Notification - Server key need to get from Naveen
+2. Push NTF Token - Api Created for create and update.
+3. Buds - Read Team and Sub-Teams buds list.
+4. Chat - Created API for Chat.
+
+22-08-2023
+
+1. Community - ID Card Issue Resolved.
+2. Community - Public & Private condition added for community, teams & sub-teams
+3. Community - Block, Unblock API added.
+
+21-08-2023
+
+1. Notification implemented for - Like - Comment - Comment Like - Comment Reply - Rebud - Gift
+2. Community Router - Read Others List
+3. Community - Request with Public & Public API Integrated.
+4. Teams List - isJoined Key added.
+5. Search - Blocked User need not to show.
+
+18-08-2023
+
+1. General Search - API created
+2. Buds - Default Buds for new user.
+3. Discover - Verified Buddys List
+4. Discover - Communities, Events, Buddys List.
+5. Login - Block and Delete API added for user.
+6. Notification - Notification Config, push notification function.
+
+17-08-2023
+
+1. Suggestion for Buddys & Communities: Event action added
+2. Community - communityGuidelines added.
+3. Community Read - Buddys List added in read community action.
+4. Discover - Router added.
+5. Bud - Save Bud readMine budDetails populate.
+
+16-08-2023
+
+1. Suggestions for Buddys & Communities:
+   Dashboard. - 16-08
+   Communities. - 16-08
+   Profile. - 16-08
+2. Story - Viewed By list should not contains the owner
+3. Community - Community Buddy List Duplicate buddy issue
+4. Buddy - Readother follower list and following List
+5. Buds - Report need to check once - Update Modified.
+
+14-08-2023
+
+1. OTP Verification - Edit for email or mobNo
+2. Login - Need to check isOtpVerified
+3. Bud - isSaved Key need to add in buds List
+
+11-08-2023
+
+1. Buds - Follower-Following Search
+2. Tag Buddy Details in read buds
+3. Community - Community count Details.
+4. Community - Buddy List -status Pending.
+
+10-08-2023
+
+1. Stories - List issue resolved and buddyList added in viewed Stories API.
+
+09-08-2023
+
+1. Stories - Text story API correction work.
+2. Community - Id card for Admin API Incorporated.
+
+08-08-2023
+
+1. Buddy - Create personal detials API issue resolved.
+2. Search - Buddy Contact search API Created to search based on mobNo.
+3. Community - Added Profile pic for member and community added in id card
+4. Story - Follower check issue resolved.
+5. Community - Suggestions List for community.
+
+07-08-2023
+
+1. Buds - List 10 items need to show.
+2. Story - Update API added to update viewedBy details.
+3. Buddy Contact Suggestion = API Created.
+4. Events - Created and read events List correction.
+5. Story - Followers only can able to see stories condition added
+6. CommunityId - Community Id Card create and read API.
+7. Community - Create and readAll API done for Board in Community
+
+03-08-2023
+
+1. Buddy - Personal Details update issue resolved.
+2. Admin - Dashboard routers API created.
+3. Search - Trends , Community & Events Search API Created.
+4. Welcome - Upload Contacts API correction work.
+
+02-08-2023
+
+1. Buddy - Buddy Detail by Id added for Splash screen (isOtpVerified).
+2. Buds - Likes API isCurrentUser added.
+3. Community - communityRequest approve and reject removed status.
+4. Privacy Settngs - Block List Update Unblock function added in API.
+5. Search Router - Check mine and remove if it is present.
+6. Buddy details - Location Details added district, state and country.
+7. Buddy, Buds - isBlocked key added in otherUsers read API.
+8. Buds - Polls Issue in readAll is resolved.
+
+01-08-2023
+
+1. Buds - Like API - isFollow added
+2. Community - Category Filter API added in read Community
+3. Search - isFollow added in Buddy search API
+4. Suggestion - Community Category Suggestion added.
+5. Buddy Details - Common follower details function added
+6. Follow Request - Read Received request buddy details added in API. - Conditions added weather its same user and - Also weather they are already following them.
+7. Chat Schema - and Chat API created.
+
+31-07-2023
+
+1. Blocked Account : userId changed Array to Object to get the createdAt
+2. BLocked Account : Blocked Account count added in privacy settings
+3. BLocked Account : Action update updated to push.
+4. Buds : Content type added in images, videos and doc to get the format.
+5. Privacy Settings : Blocked user list and follower following list added (API Created).
+6. Buddy : Other Buddy checking weather following or not
+
+28-07-2023
+
+1. Buddys - userName generation added while login.
+2. Buds - Community, Teams List added. - Temp Image keyword added
+3. Community - Request for teams and subTeams API, Block Users.
+
+27-07-2023
+
+1. Community - Community Request, Request List, Approve and Reject.
+2. Admin - Token in auth file
+3. Buds - for video Thumbnail key added.
+
+24-07-2023
+
+1. Buddy - Who can Tag and Who can Mention Completed.
+2. Community - Read All, myCommunity, joinedCommunity and Requst community work done.
+3. Bud - isAnswered id is not passed properly issue resolved
+4. Bud - Comments profilePic added.
+5. Bud - Rebud Bud owner details and buddyDetails issue resolved.
+6. Bud - Comment Like issue resolved.
+7. Bud - readRecentLocation API added in location API.
+
+21-07-2023
+
+1. Buddy - Privacy & Blocked Settings Implemented.
+2. Buds - Privacy & Blocked Settings Implemented.
+3. General Settings - General Settings, Change Password, Manage Session
+4. Privacy Settings - Privacy Settings, BlockCommenters, Hide Stories, Share Stories, Mute Stories,
+   Block Account
+5. Stories - Read Stories with Recent, Viewed and Mute
+6. Stories - Viewed By List.
+
+17-07-2023
+
+1. Trends Router Removed.
+2. Buds - Title added in Buds, - Poll Details isAnswered Updated
+3. General Settings - API Created for Task 414
+4. Privacy Settings - API Created for Task 415
+5. Settings Schema - Schema Created.
+6. Login Schema - Browser Details added.
+
+13-07-2023
+
+1. Buddy - Task Id 371 (Buddy - Profile Changes for API Integration (Personal Details, title, aboutme are clubbed in one API and Profile pic and cover pic created seperated API) changes done as per client requirements)
+2. Buddy - Language, userName error while updating personal detail issue resolved.
+
+12-07-2023
+
+1. Bud - Profile Pic added in bud list
+2. Bud - Description #tag problem resolved
+3. Bud - isAnswered key added in polls & result
+4. Bud - Result in options itself average added
+5. Event - Schema and Routers added API created. - createEvents - Done
+   read single event - Done
+   readFilters : all, myEvent, intrested, favourite, past - Done
+   categoryFilters : Need to get unique community Category - Partially Done
+   buddyStatus : mutualBuddysList, otherBuddys,
+   eventTicket - Done
+   withDrawDetails : Bank Account, UPI - Done
+
+10-07-2023
+
+1. Auth - Message OTP integrated.
+2. Buddy - Education, Experience and Achievement Delete API Integrated.
+3. Bud - Multiple Images and Documents can able to create and read.
+4. Story - Need to filter based on Follower - Done, - When some one seen i need to add count - Partially Done, - Need to show the list who have seen - Partially Done,
+
+07-07-2023
+
+1. Bud - Hide buds will not show while readOthers, readAll, readCommunity, readGrid
+2. Story - Read Mine and read others done
+
+06-07-2023
+
+1.  Bud - Images, Videos and Document issue resolved in server.
+2.  Auth - Referral code if not match error message throw.
+3.          - Message OTP tried getting Invalid DLT template.
+
+05-07-2023
+
+1.  Buds - Tags Completed
+2.           - Who can view your bud - (everyone, noOne)
+3.           - Who can comment- (everyone, noone)
+4.           - Poll result count added
+5.           - Comment Report API Added.
+6.           - Save, Hide and Bud Reprt
+7.  Buddy - Follower and Following List API Created
+8.           - Skills and Intrest API Seperated.
+
+02-07-2023 \*\*\* Changes Committed on (03-07-2023)
+
+1. login - Referral Code readCode and readMine Api added
+2. Buds - Report API (create, read and update) created.
+3. Story - Created API for create, readMine and readOthers.
+4. Community - Created API for - teamsModel (CRU), - subTeamsModel (CRU), - communityModel (CRU), - communityIDModel (CRU), - communityQuestionModel (CRU)
+
+01-07-2023
+
+1. login - Referral Code flow
+2. Buds - Images, Videos, Document changed to V3.
+
+30-06-2023
+
+1. login - IsOTP Verified added in (Router & Schema)
+2. Buds - Tags API created for (Recent List & Trending) (24Hrs once need to update api)
+3. Buds - Checking weather it is old tag or not if new create tag while buds creation
+4. Buds - Actions added for read and update in uploadImages, uploadVideos and uploadDoc
+5. Auth - Mail Integration done.
+
+28-06-2023 - Bud-Module/-Featuers-Images,Videos,Doc (Branch).
+
+1. Msg91 Config Initiated and domain need to map.
+2. Buddy Module - Title, userName, profilePic, coverPic clubbed in Title API Router
+3. Buddy Module - About Me clubbed to personal details.
+4. Buds Module - Like error (if some other user like the bud its getting decreased) - solved - Average Calculation done in Result - read, readMine, readOthers, readGrid, readOthersGrid, dynamic values - Polls, result problem solved. - Tags API Added.

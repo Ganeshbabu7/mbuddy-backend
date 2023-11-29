@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1011587224810",
+    "firebase_url": "https://mybuddys-8e468.firebaseio.com",
+    "project_id": "mybuddys-8e468",
+    "storage_bucket": "mybuddys-8e468.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011587224810:android:f24919d5823eb8d6663393",
+        "android_client_info": {
+          "package_name": "com.sanorac.mybuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011587224810-6es0285rt0b6mp7601lvaqi533no0386.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3gffomAIK1BZQ3bk7duR7HAzyo0kBZ98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011587224810-6es0285rt0b6mp7601lvaqi533no0386.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
