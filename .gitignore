@@ -1,0 +1,13 @@
+# See https://gitlab.sanoractechnologies.com/mybuddy/mybuddy-backend.git for more about ignoring files.
+
+# dependencies
+node_modules/
+.gitlab.yml
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+package-lock.json
