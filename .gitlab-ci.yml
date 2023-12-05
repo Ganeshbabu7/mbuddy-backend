@@ -1,0 +1,16 @@
+UAT:
+  stage: deploy
+  tags:
+    - Docker_Runner1
+  only:
+    refs:
+      - develop
+  before_script:
+    - apt-get update -qq && apt install -y openssh-client openssh-server
+    - mkdir -p ~/.ssh     
+    - echo -e "$SSH_KEY1" > ~/mybuddynew.pem     
+    - chmod 400 ~/mybuddynew.pem     
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - ssh -i ~/mybuddynew.pem $UATUSER_NAME@$UATSERVER_IP "cd /home/ubuntu/git/mybuddy-backend && git checkout UAT && git pull origin UAT && cp -r * /home/ubuntu/mybuddy-backend && cd /home/ubuntu/mybuddy-backend && rm -rf node_modules/ package-lock.json && npm install && sudo systemctl restart pm2-ubuntu.service && sudo systemctl restart apache2.service && sudo systemctl status pm2-ubuntu.service && exit"
+ # when: manual
