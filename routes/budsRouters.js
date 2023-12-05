@@ -1762,14 +1762,14 @@ const uploadImages = async (req, res) => {
 
       const uploadPromises = files.map((file, index) => {
         const params = {
-          Bucket: "mybuddy-sanorac",
+          Bucket: process.env.S3_BUCKET,
           Key: `mb_img_${userIdRandom}_${timestamp}_${index}`,
           Body: file.buffer,
           ContentType: file.mimetype,
         };
 
         const tempParams = {
-          Bucket: "mybuddy-sanorac",
+          Bucket: process.env.S3_BUCKET,
           Key: `mb_tempImg_${userIdRandom}_${timestamp}_${index}`,
           Body: tempImageFile ? tempImageFile.buffer : null,
           ContentType: tempImageFile ? tempImageFile.mimetype : null,
@@ -1778,9 +1778,9 @@ const uploadImages = async (req, res) => {
         const command = new PutObjectCommand(params);
 
         const uploadImagePromise = s3Client.send(command).then(() => {
-          const imageUrl = `https://mybuddy-sanorac.s3.ap-south-1.amazonaws.com/${params.Key}`;
+          const imageUrl = `https://`+process.env.S3_BUCKET+`.s3.ap-south-1.amazonaws.com/${params.Key}`;
           const tempImageUrl = tempParams.Body
-            ? `https://mybuddy-sanorac.s3.ap-south-1.amazonaws.com/${tempParams.Key}`
+            ? `https://`+process.env.S3_BUCKET+`.s3.ap-south-1.amazonaws.com/${tempParams.Key}`
             : null;
           const image = new imageModel({
             userId: id,
@@ -1862,7 +1862,7 @@ const uploadVideos = async (req, res) => {
       }
 
       const params = {
-        Bucket: "mybuddy-sanorac",
+        Bucket: process.env.S3_BUCKET,
         Key: `MB_Video_${userIdRandom}_${s3DateFormat}`,
         Body: file.buffer,
         ContentType: file.mimetype,
@@ -1872,7 +1872,7 @@ const uploadVideos = async (req, res) => {
 
       try {
         await s3Client.send(command);
-        const videoUrl = `https://mybuddy-sanorac.s3.ap-south-1.amazonaws.com/${params.Key}`;
+        const videoUrl = `https://`+process.env.S3_BUCKET+`.s3.ap-south-1.amazonaws.com/${params.Key}`;
         const video = new videoModel({
           userId: id,
           videoUrl: videoUrl,
@@ -1932,7 +1932,7 @@ const uploadAudios = async (req, res) => {
       }
 
       const params = {
-        Bucket: "mybuddy-sanorac",
+        Bucket: process.env.S3_BUCKET,
         Key: `MB_Audio_${userIdRandom}_${s3DateFormat}`,
         Body: file.buffer,
         ContentType: file.mimetype,
@@ -1942,7 +1942,7 @@ const uploadAudios = async (req, res) => {
 
       try {
         await s3Client.send(command);
-        const audioUrl = `https://mybuddy-sanorac.s3.ap-south-1.amazonaws.com/${params.Key}`;
+        const audioUrl = `https://`+process.env.S3_BUCKET+`.s3.ap-south-1.amazonaws.com/${params.Key}`;
         const audio = new audioModel({
           userId: id,
           audioUrl: audioUrl,
@@ -2003,7 +2003,7 @@ const uploadDocuments = async (req, res) => {
 
       const uploadPromises = files.map((file) => {
         const params = {
-          Bucket: "mybuddy-sanorac",
+          Bucket: process.env.S3_BUCKET,
           Key: `MB_Doc_${userIdRandom}_${s3DateFormat}`,
           Body: file.buffer,
           ContentType: file.mimetype,
@@ -2014,7 +2014,7 @@ const uploadDocuments = async (req, res) => {
         return s3Client
           .send(command)
           .then(() => {
-            const documentUrl = `https://mybuddy-sanorac.s3.ap-south-1.amazonaws.com/${params.Key}`;
+            const documentUrl = `https://`+process.env.S3_BUCKET+`.s3.ap-south-1.amazonaws.com/${params.Key}`;
             const document = new documentModel({
               userId: id,
               documentUrl: documentUrl,

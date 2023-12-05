@@ -96,7 +96,7 @@ const addCategoryFunction = async (req, res) => {
         let categoryImageUrl;
         if (file) {
           const params = {
-            Bucket: "mybuddy-sanorac",
+            Bucket: process.env.S3_BUCKET,
             Key: `mb_img_${userIdRandom}_${timestamp}`,
             Body: file.buffer,
             ContentType: file.mimetype,
@@ -104,7 +104,7 @@ const addCategoryFunction = async (req, res) => {
 
           const command = new PutObjectCommand(params);
           await s3Client.send(command);
-          categoryImageUrl = `https://mybuddy-sanorac.s3.ap-south-1.amazonaws.com/${params.Key}`;
+          categoryImageUrl = `https://`+process.env.S3_BUCKET+`.s3.ap-south-1.amazonaws.com/${params.Key}`;
         }
 
         let result = new eventCategoryModel({

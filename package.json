@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start:dev": "node app.js"
+    "start:dev": "node app.js",
+    "debug": "nodemon --inspect app.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.352.0",
