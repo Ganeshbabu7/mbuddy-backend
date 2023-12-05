@@ -187,7 +187,7 @@ runCronJobs();
 // Socket IO :
 const io = socket(server, {
   cors: {
-    origin: "http://13.233.23.16:5008",
+    origin: "http://13.233.23.16:5008/",
     //origin: "http://localhost:5000",
     credentials: true,
   },
